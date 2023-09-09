@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Portfolio website</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+
+
+    </head>
+    <body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-test">
+                <p>Web Designer</p>
+                <h1>Hi, I'm<span> Anjeli Sahu</span><br> From Cuttack</h1>
+
+            </div>
+        </div>
+
+    </div>
+    <div id="About">
+        <div class="container">
+            <div class="row">
+             <div class="about-col-1">
+             <img src="images/my pic.jpg">
+             </div>
+             <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hey.
+                    <br>I am Ms Anjeli sahu currently residing in Odisha. I am currently pursuing Master in Computer Application from one of the top government colleges of Odisha, Indira Gandhi Institute of Technology, Sarang. I am more interested towards coding.
+                    My portfolio is a representation of all that i've learned and accomplished as a web development student.<br>
+                    Thankyou!!!!! </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('project')" >Project</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Languages</span>
+                                <br>C <br>C++<br>java
+                            </li>
+                            <li><span>Web development</span><br>Designing web interfaces using html,css and javascript</li>
+                        </ul>
+                        </div>
+                        <div class="tab-contents active-tab" id="education">
+                            <ul>
+                                <li><span>MCA</span><br>I am currently pursuing MCA</li>
+                                <Li><span>Graduation</span><br>I have compleated my graduation in the year 2022</Li>
+                                <li><span>Intermediate</span><br>I have compleated my +2 in the year 2019</li>
+                                <li><span>matriculation</span><br>I have compleated my 10th in the year2017</li>
+                            
+                            </ul>
+                            </div> 
+                            <div class="tab-contents" id="project">
+                                <ul>
+                                    <li><span>Portfolio</span><br>Using html,css and javascript</li>
+                                    <li><span>Temperature Converter</span><br>Using html and css</li>
+                                </ul>
+                            </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/download.jpg">
+                        <div class="layer">
+                            <h3>Portfolio</h3>
+                        </div>
+                    </div>
+                    <div class="work">
+                       <img src="images/temp.jpg">
+                       <div class="layer">
+                        <h3>Temperature Converter</h3>
+                       </div>
+                    </div>
+                </div>
+                <a href="#" class="btn">see more</a>
+           </div>
+        </div>
+
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-at"></i> contact@example.com</p>
+                        <p><i class="fas fa-phone-square-alt"></i> 6768625624</p>
+                        <div class="social-icons">
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-instagram-square"></i></a>
+                            <a href=""><i class="fab fa-linkedin"></i></a>
+                            <a href=""><i class="fab fa-twitter-square"></i></a>
+                        </div>
+                        <a href="images/Anjeli's Resume (3).pdf" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="name" placeholder="Enter your name" required>
+                            <input type="email" name="email" placeholder="Enter your email" required>
+                            <textarea name="message"  rows="6" placeholder="Enter your message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>copyright <i class="fas fa-copyright"></i>This is made by Anjeli</p>
+            </div>
+        </div>
+
+        
+    <script>
+        
+        var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+    </script>
+    </body>
+</html>
